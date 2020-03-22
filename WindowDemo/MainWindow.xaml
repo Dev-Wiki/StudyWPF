@@ -4,16 +4,45 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowDemo"
-        mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
-        BorderBrush="Red" BorderThickness="3"
-        WindowStyle="None"
-        AllowsTransparency="True"
-        Background="Transparent"
-        ResizeMode="CanResize"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        BorderBrush="Red" BorderThickness="2" 
+        StateChanged="MainWindow_OnStateChanged"
+        Background="White" ResizeMode="CanResize"
+        Loaded="MainWindow_OnLoaded"
+        Unloaded="MainWindow_OnUnloaded"
         Title="Home" Icon="App.png"
         Height="400" Width="600">
-    <Border CornerRadius="50" Background="BlueViolet"
-            Width="300" Height="300">
-    </Border>
+    <Window.Resources>
+        <Style x:Key="{x:Type Button}" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="32"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="ShowHintWindowBtn" Grid.Row="1" Grid.Column="0"
+                Click="ShowHintWindowBtn_OnClick" Content="显示提示窗"/>
+        <Button Grid.Row="1" Grid.Column="1"/>
+        <Button Grid.Row="1" Grid.Column="2"/>
+        <Button Grid.Row="1" Grid.Column="3"/>
+        <Button Grid.Row="1" Grid.Column="4"/>
+    </Grid>
 </Window>
