@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage x:Key="MenuIcon" UriSource="ic_menu_black_24dp.png"/>
+    <BitmapImage x:Key="BackIcon" UriSource="ic_arrow_back_black_24dp.png"/>
+</ResourceDictionary>
